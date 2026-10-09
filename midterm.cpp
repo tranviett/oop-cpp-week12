@@ -87,8 +87,34 @@ private:
 
 };
 
-
 int main() {
+    Fish ca1;
+    Fish ca2(2);
+    Fish ca3(3, "Ca lau san");
+    Fish ca4(4, "Ca luc", "xanh duong");
+    Fish ca5(5, "Cha ca", "ngon", "hien");
+
+    cout << "DANH SACH CA:" << endl;
+    ca1.displayFishInfo();
+    ca2.displayFishInfo();
+    ca3.displayFishInfo();
+    ca4.displayFishInfo();
+    ca5.displayFishInfo();
+
+    ca3.setName("Ca chim");
+    ca3.setColor("white");
+    ca3.setCharacteristic("doc dao");
+
+    cout << endl;
+    cout << "THONG TIN SAU KHI CAP NHAT:" << endl;
+    cout << "ID: " << ca3.getId() << endl;
+    cout << "Name: " << ca3.getName() << endl;
+    cout << "Color: " << ca3.getColor() << endl;
+    cout << "Characteristic: " << ca3.getCharacteristic() << endl;
+
+    cout << endl;
+
+    ca3.displayFishInfo();
 
     return 0;
 }
